@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function saltarLinea() {
+            document.write("<br>");
+        }
+
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+
+        var edad = parseInt(prompt("¿Cuál es tu edad?"));
+        var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+        
+        //solucion corta
+        
+        /*
+        if ((edad >= 18) && (tieneLicencia == "S") ) {
+            imprimir("Puedes conducir");
+        } else {
+            imprimir("No puedes conducir");
+        }
+        */
+        /*solucion larga
+        if (edad >= 18) {
+            if (tieneLicencia == "S") {
+                imprimir("Puedes conducir");
+            }
+        }
+
+        if (edad >= 18) {
+            if (tieneLicencia == "N") {
+                imprimir(" No Puedes conducir y debes sacar la  licencia");
+            }
+        }
+
+        if (edad < 18) {
+            if (tieneLicencia == "S") {
+                imprimir(" No Puedes conducir y debes ser mayor de edad");
+            }
+        }
+
+        if (edad < 18) {
+            if (tieneLicencia == "N") {
+                imprimir(" No Puedes conducir, debes ser mayor de edad y debes sacar la  licencia");
+            }
+        }
+        
+        */
+
+        /*solucion corta*/
+        
+        if (edad >= 18) {
+            if (tieneLicencia == "S") {
+                imprimir("Puedes conducir");
+            }else{
+                imprimir(" No Puedes conducir y debes sacar la  licencia");
+            }
+        }
+
+        if (edad < 18) {
+            if (tieneLicencia == "S") {
+                imprimir(" No Puedes conducir y debes ser mayor de edad");
+            }else{
+                imprimir(" No Puedes conducir, debes ser mayor de edad y debes sacar la  licencia");
+            }
+        }
+
+        /*solucion dada por el ejercicio*/
+        /*
+        if(edad >= 18) {
+        if(tieneLicencia == "S") {
+            imprimir("Puedes conducir");
+        }
+        }
+
+        if(edad < 18) {
+        imprimir("No puedes conducir");
+        }
+        */
+
+    </script>
+</body>
+
+</html>

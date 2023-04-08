@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡No hay ingredientes repetidos aquí!</title>
+</head>
+<h1>Recetas de Armando</h1>
+<body>
+    <script>
+
+        /*
+        
+        Armando tuvo la idea de crear un programa para crear recetas. En él, hay una lista en la que el usuario puede agregar ingredientes. Observemos:
+
+<meta charset="UTF-8">
+
+<h1>Recetas de Armando</h1>
+
+<script>
+
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+
+    while( contador <= cantidad) {
+        var ingrediente = prompt("Informe el ingrediente " + contador);
+        ingredientes.push(ingrediente);
+        contador++;
+    }
+
+    console.log(ingredientes);
+
+
+    Al probar el código, descubrimos que funciona. El problema es que podemos agregar ingredientes repetidos a una lista de recetas. Cambia el código para que no se puedan agregar los ingredientes repetidos.
+
+    podrás encontrar la solución fácilmente haciendo clic en "Ver opinión del Instructor", pero primero intenta resolver el ejercicio por tu cuenta. Si tienes alguna pregunta, visita el foro.
+
+    NOTA: No necesitas responder aquí, intenta resolver el problema en tu computadora y compara tu solución con el código que mostramos a continuación.
+
+        */
+
+
+        function noRepetir(cantidad){
+        var ingredientes = [];
+        var contador = 1;
+        var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+
+        while( contador <= cantidad) {
+        var ingrediente = prompt("Informe el ingrediente " + contador);
+        var repetido = false; 
+
+            if (ingrediente !=0) {
+                for(var posicion = 0; posicion< ingredientes.length; posicion++){
+                    if (ingrediente == ingredientes[posicion]) {
+                        repetido = true;
+                        alert("No puedes repetir ingredientes!!");
+                        break;
+                    }
+                }
+                if (repetido == false) {
+                    ingredientes.push(ingrediente);
+                    contador++;
+                }
+            }
+        }
+
+        return ingredientes;
+    }
+
+    var ingredientes = noRepetir();
+    document.write(ingredientes);
+    console.log(ingredientes);  
+
+    /* soculcion dada por el ejercicio
+
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+
+  while(contador <= cantidad) {
+    var ingrediente = prompt("Informe el ingrediente " + contador);
+    var existe = false;
+    for(var posicion = 0; posicion < ingredientes.length; posicion++) {
+      if(ingredientes[posicion] == ingrediente){
+        existe = true;
+    alert("repetido " + ingrediente);
+        break;
+      }
+     }
+     if(existe == false) {
+      ingredientes.push(ingrediente);
+      contador++;
+     }
+   }
+   console.log(ingredientes);
+    
+    */
+
+
+</script>
+</body>
+
+</html>
